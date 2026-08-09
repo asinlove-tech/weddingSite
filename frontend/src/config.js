@@ -5,9 +5,11 @@
 
 export const images = {
     temple: "/images/gopuram.webp",
-    ganesha: "/images/ganesha.webp",
+    ganesha: "/images/ganesha-gold.png",
     cocktail: "/images/cocktail.webp",
     mandap: "/images/mandap.webp",
+    mandapCut: "/images/mandap-cut.png",
+    pattern: "/images/pattern.webp",
 };
 
 export const couple = {
@@ -60,10 +62,10 @@ export const meetTheCouple = {
     title: "Meet the Couple",
     intro: "Some stories are written over years; ours found its way home. What began as two separate journeys now continues as one — and we cannot imagine a more joyful beginning than celebrating it surrounded by the people we love most.",
     photos: [
-        { src: images.cocktail, alt: "The couple dancing, illustrated" },
-        { src: images.mandap, alt: "The couple in the wedding mandap, illustrated" },
-        { src: images.temple, alt: "South Indian temple gopuram, illustrated" },
-        { src: images.ganesha, alt: "Lord Ganesha line artwork" },
+        { src: images.cocktail, alt: "The couple dancing, illustrated", pos: "center 30%" },
+        { src: images.mandap, alt: "The couple in the wedding mandap, illustrated", pos: "center 35%" },
+        { src: images.temple, alt: "South Indian temple gopuram, illustrated", pos: "center 12%" },
+        { src: images.ganesha, alt: "Lord Ganesha golden line artwork", pos: "center" },
     ],
 };
 

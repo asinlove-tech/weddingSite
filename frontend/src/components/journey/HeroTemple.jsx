@@ -1,18 +1,33 @@
+import { useRef } from "react";
 import { couple } from "@/config";
-import { useReveal } from "@/hooks/useReveal";
+import { useRafScroll } from "@/hooks/useRafScroll";
 import { ChevronDown } from "lucide-react";
 
 export const HeroTemple = () => {
-    const ref = useReveal();
+    const namesRef = useRef(null);
+    const cueRef = useRef(null);
+
+    useRafScroll(() => {
+        const t = Math.min(1, Math.max(0, (window.scrollY - 20) / 120));
+        if (namesRef.current) {
+            namesRef.current.style.opacity = String(t);
+            namesRef.current.style.transform = `translateY(${(1 - t) * 18}px)`;
+        }
+        if (cueRef.current) cueRef.current.style.opacity = String(1 - t);
+    });
+
     return (
         <section
-            ref={ref}
             data-testid="hero-temple"
             aria-label="Wedding invitation of Amit Kumar and Sri Sakthi Maheswari"
-            className="relative flex min-h-[100svh] flex-col items-center justify-between"
+            className="relative h-[135svh]"
         >
-            <div className="px-6 pt-[15vh] text-center md:pt-[17vh]">
-                <div className="relative">
+            <div className="sticky top-0 flex h-[100svh] flex-col items-center justify-between overflow-hidden">
+                <div className="px-6 pt-[10vh] text-center">
+                <div
+                    ref={namesRef}
+                    className="relative opacity-0 will-change-transform"
+                >
                     <div
                         aria-hidden="true"
                         className="absolute -inset-x-16 -inset-y-10 md:-inset-x-24"
@@ -23,7 +38,7 @@ export const HeroTemple = () => {
                     />
                     <h1
                         data-testid="hero-names"
-                        className="reveal relative font-display font-medium text-[#FAF5EC] [text-shadow:0_2px_36px_rgba(11,31,48,0.55),0_1px_6px_rgba(11,31,48,0.4)]"
+                        className="relative font-display font-medium text-[#FAF5EC] [text-shadow:0_2px_36px_rgba(11,31,48,0.55),0_1px_6px_rgba(11,31,48,0.4)]"
                     >
                     <span className="block text-5xl leading-tight sm:text-6xl lg:text-7xl">
                         {couple.groom}
@@ -36,12 +51,13 @@ export const HeroTemple = () => {
                     </span>
                     </h1>
                 </div>
-            </div>
-            <div className="reveal reveal-delay-2 pb-10" aria-hidden="true">
-                <ChevronDown
-                    data-testid="hero-scroll-cue"
-                    className="scroll-cue h-6 w-6 text-[#FAF5EC]/85 [filter:drop-shadow(0_1px_6px_rgba(11,31,48,0.5))]"
-                />
+                </div>
+                <div ref={cueRef} className="pb-10 will-change-[opacity]" aria-hidden="true">
+                    <ChevronDown
+                        data-testid="hero-scroll-cue"
+                        className="scroll-cue h-6 w-6 text-[#FAF5EC]/85 [filter:drop-shadow(0_1px_6px_rgba(11,31,48,0.5))]"
+                    />
+                </div>
             </div>
         </section>
     );

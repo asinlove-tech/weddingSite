@@ -16,7 +16,7 @@ export const TempleBlessing = () => {
         const rect = section.getBoundingClientRect();
         const vh = window.innerHeight;
         const p = Math.min(1, Math.max(0, (vh * 0.9 - rect.top) / (vh * 1.15)));
-        img.style.transform = `translateY(${-p * 34}px) scale(${1 - p * 0.15})`;
+        img.style.transform = `translateY(${-p * 90}px) scale(${1 - p * 0.42})`;
     });
 
     return (
@@ -30,15 +30,13 @@ export const TempleBlessing = () => {
             className="relative px-6 pb-28 pt-24 md:pb-36 md:pt-32"
         >
             <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
-                <div
-                    data-testid="ganesha-shrine"
-                    className="shrine reveal flex h-[300px] w-[240px] items-center justify-center overflow-hidden md:h-[360px] md:w-[290px]"
-                >
+                <div className="reveal">
                     <img
                         ref={shrineImgRef}
+                        data-testid="ganesha-image"
                         src={images.ganesha}
-                        alt="Lord Ganesha line artwork, glowing within the temple sanctum"
-                        className="shrine-img h-[78%] w-auto"
+                        alt="Lord Ganesha golden line artwork"
+                        className="h-[300px] w-auto will-change-transform [filter:drop-shadow(0_8px_34px_rgba(240,226,180,0.45))] md:h-[400px]"
                     />
                 </div>
 

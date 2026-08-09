@@ -11,11 +11,19 @@ import { ClosingMandap } from "./ClosingMandap";
 
 export const WeddingJourney = () => (
     <div className="relative">
+        <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 z-0 opacity-50"
+            style={{
+                backgroundImage: "url(/images/pattern-tile.webp)",
+                backgroundSize: "880px",
+                backgroundRepeat: "repeat",
+            }}
+        />
         <TempleStage />
         <main className="relative z-10">
             <HeroTemple />
-            <div className="carpet-wrap">
-                <div className="carpet-strip" aria-hidden="true" />
+            <div data-carpet-region className="relative">
                 <TempleBlessing />
                 <WeddingCelebrations />
             </div>

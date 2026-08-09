@@ -17,6 +17,7 @@ export const WeddingCelebrations = () => {
                     eyebrow="The Festivities"
                     title="Wedding Celebrations"
                     testId="celebrations-title"
+                    light
                 />
                 <div className="mt-16 grid gap-10 md:mt-20 md:grid-cols-2 md:gap-14">
                     {events.map((event, i) => (
