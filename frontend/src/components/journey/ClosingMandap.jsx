@@ -71,7 +71,7 @@ export const ClosingMandap = () => {
                         {closing.lines.map((line, i) => (
                             <p
                                 key={i}
-                                className="font-display text-xl italic leading-relaxed text-[#3A3128] md:text-2xl"
+                                className="font-display text-xl italic leading-relaxed text-[#241D16] md:text-2xl"
                             >
                                 {line}
                             </p>
@@ -80,7 +80,7 @@ export const ClosingMandap = () => {
                     <div className="mt-1">
                         <Ornament />
                     </div>
-                    <p className="font-display text-base font-medium uppercase tracking-[0.2em] text-[#8A5A1E] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-xl">
+                    <p className="font-display text-base font-medium uppercase tracking-[0.2em] text-[#6B4313] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-xl">
                         {closing.signoff}
                     </p>
                 </div>

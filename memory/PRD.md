@@ -25,6 +25,7 @@ Build a premium, immersive, single-page wedding invitation website for Amit Kuma
 - Finale: new mandap artwork, warm cream/sand palette matching the art (replacing blue dusk), final thank-you copy, signoff highlighted in uppercase antique gold.
 - Verified via screenshots (desktop + mobile): hero, names, blessing, Ganesha, cards, venue, couple, info, RSVP, wishlist, closing.
 - Rev 6: walk timing re-eased so Ganesha and the blessing text land on the carpet (not the tower); "While You're in Coimbatore" card with underlined "Read our recommendations" link; closing finale rebuilt as a sunrise (blue → dusty pink → peach → cream with warm sun glow), smaller cozy typography, signoff clear of the mandap artwork.
+- Rev 7: hero extended to 235svh so Ganesha/blessing arrive ~2 screens later, fully on the carpet; hero names now fade out as the guest reaches the temple doorway; finale text darkened for contrast.
 
 ## Backlog / Next Tasks
 - P0: Replace the RSVP button PLACEHOLDER link in `src/config.js` with the real RSVP form/contact.
