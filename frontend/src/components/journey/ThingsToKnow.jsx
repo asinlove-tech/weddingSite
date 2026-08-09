@@ -28,9 +28,14 @@ const InfoCard = ({ card, delay }) => {
             <p className="mt-4 text-base leading-relaxed text-[#2B2620]/70">
                 {card.text}
             </p>
+            {card.href && (
+                <span className="mt-3 inline-block text-sm font-medium tracking-[0.06em] text-[#B08D3F] underline decoration-[#B08D3F]/50 underline-offset-4 transition-colors group-hover:text-[#8A5A1E]">
+                    {card.linkLabel || "Read more"}
+                </span>
+            )}
         </>
     );
-    const cls = `reveal ${delay} block rounded-3xl border border-[#B08D3F]/20 bg-[#F2EADA]/60 p-7 transition-[border-color,box-shadow] duration-300 hover:border-[#B08D3F]/50 hover:shadow-[0_24px_50px_-30px_rgba(43,38,32,0.35)]`;
+    const cls = `reveal ${delay} group block rounded-3xl border border-[#B08D3F]/20 bg-[#F2EADA]/60 p-7 transition-[border-color,box-shadow] duration-300 hover:border-[#B08D3F]/50 hover:shadow-[0_24px_50px_-30px_rgba(43,38,32,0.35)]`;
     return card.href ? (
         <a
             data-testid={`info-card-${card.id}`}

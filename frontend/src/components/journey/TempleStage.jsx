@@ -17,11 +17,11 @@ export const TempleStage = () => {
             : vh * 6;
         const p = Math.min(1, Math.max(0, y / Math.max(1, end - vh * 1.1)));
         const posY =
-            p < 0.15
-                ? 3 + (p / 0.15) * 6
-                : p < 0.45
-                  ? 9 + 53 * Math.pow((p - 0.15) / 0.3, 1.25)
-                  : 62 + (34 * (p - 0.45)) / 0.55;
+            p < 0.08
+                ? 3 + (p / 0.08) * 5
+                : p < 0.3
+                  ? 8 + 54 * Math.pow((p - 0.08) / 0.22, 1.15)
+                  : 62 + (34 * (p - 0.3)) / 0.7;
         img.style.backgroundPosition = `center ${posY}%`;
         img.style.transform = `scale(${1 + p * 0.06})`;
         img.style.opacity = String(1 - seg(p, 0.86, 1.0));

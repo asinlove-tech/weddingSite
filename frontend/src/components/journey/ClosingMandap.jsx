@@ -50,7 +50,7 @@ export const ClosingMandap = () => {
                     className="absolute inset-0 opacity-0"
                     style={{
                         background:
-                            "linear-gradient(180deg,#FAF5EC 0%,#F6EFDF 42%,#F0E3C8 75%,#EAD8B8 100%)",
+                            "linear-gradient(180deg,#A9BFD9 0%,#D9B8C4 30%,#F2C9A8 55%,#F8EEDC 78%,#F6F0E3 100%)",
                     }}
                 />
                 <div
@@ -59,28 +59,28 @@ export const ClosingMandap = () => {
                     className="absolute inset-0 opacity-0"
                     style={{
                         background:
-                            "radial-gradient(ellipse 70% 40% at 50% 78%, rgba(217,164,65,0.3) 0%, rgba(217,140,65,0.12) 50%, transparent 78%)",
+                            "radial-gradient(ellipse 75% 45% at 50% 66%, rgba(244,190,120,0.55) 0%, rgba(233,150,110,0.22) 50%, transparent 78%)",
                     }}
                 />
                 <div
                     ref={textRef}
                     data-testid="closing-text"
-                    className="absolute inset-x-0 top-0 z-20 flex flex-col items-center gap-5 px-6 pt-[7vh] text-center opacity-0 will-change-transform"
+                    className="absolute inset-x-0 top-0 z-20 flex flex-col items-center gap-3 px-6 pt-[6vh] text-center opacity-0 will-change-transform"
                 >
-                    <div className="flex max-w-xl flex-col gap-4">
+                    <div className="flex max-w-xl flex-col gap-3">
                         {closing.lines.map((line, i) => (
                             <p
                                 key={i}
-                                className="font-display text-2xl italic leading-snug text-[#3A3128] md:text-4xl"
+                                className="font-display text-xl italic leading-relaxed text-[#3A3128] md:text-2xl"
                             >
                                 {line}
                             </p>
                         ))}
                     </div>
-                    <div className="mt-2">
+                    <div className="mt-1">
                         <Ornament />
                     </div>
-                    <p className="font-display text-xl font-medium uppercase tracking-[0.18em] text-[#8A5A1E] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-3xl">
+                    <p className="font-display text-base font-medium uppercase tracking-[0.2em] text-[#8A5A1E] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-xl">
                         {closing.signoff}
                     </p>
                 </div>
@@ -89,7 +89,7 @@ export const ClosingMandap = () => {
                     src={images.mandap}
                     alt="Illustration of the bride and groom seated from behind in a wedding mandap of carved wooden pillars, banana leaves and jasmine garlands, beside the sacred fire"
                     loading="lazy"
-                    className="relative z-10 mb-[3vh] mt-auto max-h-[64vh] w-auto max-w-[98vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,black_28%)] md:max-h-[66vh]"
+                    className="relative z-10 mb-[4vh] mt-auto max-h-[54vh] w-auto max-w-[96vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,black_28%)] md:max-h-[56vh]"
                 />
             </div>
         </section>

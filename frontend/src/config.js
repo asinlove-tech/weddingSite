@@ -92,8 +92,9 @@ export const infoSection = {
         {
             id: "explore",
             icon: "explore",
-            title: "Things to Do Around Coimbatore",
-            text: "Temple towns, misty hills and filter coffee — our curated guide has all our favourites for a little side trip.",
+            title: "While You're in Coimbatore",
+            text: "Temples, hills, good food and filter coffee — a few of our favourites for a little adventure beyond the wedding.",
+            linkLabel: "Read our recommendations",
             href: "https://docs.google.com/document/d/1TJGqHQL5oteEY-SzmfUG_-QxhH_1EzXVdTcAJb7jHKw/edit?usp=sharing",
         },
     ],
