@@ -13,22 +13,21 @@ Build a premium, immersive, single-page wedding invitation website for Amit Kuma
 - Components: `components/journey/` (WeddingJourney, TempleStage, HeroTemple, TempleBlessing, WeddingCelebrations, EventCard, Venue, MeetTheCouple, PhotoFrame, ThingsToKnow, Rsvp, WeddingWishlist, ClosingMandap), `components/shared/` (PrimaryButton, SectionHeader, Ornament), `hooks/` (useRafScroll, useReveal).
 - Artworks in `public/images/`: gopuram.webp (user-provided hero), ganesha.webp (user-provided, shown inside dark sanctum arch), cocktail.webp, mandap.webp (user-provided, resized/recompressed).
 
-## Implemented (2026-08-09, rev 4)
-- Full-bleed temple stage: gopuram artwork spans the page width; scroll pans sky → tower → carpet in one continuous walk (piecewise eased curve), dissolving gradually into a seamless damask motif background (mirror-tiled, low-frequency-flattened, ivory-blended, 35% opacity) for Venue onward.
-- Hero styled after the reference poster: names hidden on load, fade in pinned on first scroll — white uppercase Cormorant with wide letter-spacing, "AND" in small caps between, soft shadow; mobile keeps names single-line with nowrap.
-- Ganesha: AI-refined (Gemini Nano Banana image edit of the user's art) into clean fine cream-gold line art, keyed transparent — crisp filigree floating directly on the artwork's carpet; scales down and rises on scroll; bottom edge soft-masked.
-- Blessing text on a subtle calm ivory glow (low-opacity radial pool) over the carpet — no card edges.
-- Event cards: solid soft-beige (#F5EDDC) cards with deeper shadow — stand out from the carpet; oval-framed artworks; bigger typography.
-- Venue: cute vintage car illustration (AI-generated watercolor, marigold garlands, background removed) instead of a photo; Google Maps CTA (PLACEHOLDER URL).
-- Tighter rhythm: reduced inter-section padding throughout (py-16/24), larger section titles (text-5xl/6xl), larger body copy, Wishlist now uses the standard SectionHeader treatment.
-- Closing finale: larger mandap artwork with its top edge faded into the warm dusk sky, thank-you text overlaid above in readable ivory, couple as the sole highlight; page ends on the scene.
-- AI assets generated via emergentintegrations (Gemini 3.1 Flash Image / Nano Banana) using EMERGENT_LLM_KEY: venue-car.png, ganesha-ai.png. Script: /app/scripts/gen_images.py.
-- Verified via screenshots (desktop + mobile): hero names (poster style), Ganesha on carpet, blessing glow, beige cards, venue car, couple frame, info cards, RSVP, wishlist, closing finale.
+## Implemented (2026-08-09, rev 5 — final content & assets)
+- Crisp user-supplied assets swapped in: high-res gopuram (846×2000), clean transparent cream Ganesha line art (used directly), new wooden-mandap couple artwork, and a seamless damask tile (mirror-tiled + low-frequency flattened — no merge lines).
+- Hero: "AMIT KUMAR WEDS SRI SAKTHI MAHESWARI" in white uppercase letterspaced Cormorant over the sky (reference-poster style), mobile-safe single lines.
+- Blessing: final copy — "With the blessings of our parents and elders… On 25th October 2026, in Coimbatore…" on a calm ivory glow over the carpet.
+- Venue: Bellezza Event Venue, Coimbatore, Tamil Nadu with real Google Maps link (maps.app.goo.gl/sFnxQgQYNtkiukdM6) and the AI-generated garlanded vintage car.
+- Meet the Couple: final playful paragraph; photo frame slideshow (cocktail, new mandap, temple, framed Ganesha).
+- Things to Know: final Weather copy; Travel Tips; Things to Do links to the real Google Doc recommendations.
+- RSVP: final copy, contact line removed (button link still PLACEHOLDER in config).
+- Wishlist: final playful copy, real link hazlnut.in/wishlist/asinlove.
+- Finale: new mandap artwork, warm cream/sand palette matching the art (replacing blue dusk), final thank-you copy, signoff highlighted in uppercase antique gold.
+- Verified via screenshots (desktop + mobile): hero, names, blessing, Ganesha, cards, venue, couple, info, RSVP, wishlist, closing.
 
 ## Backlog / Next Tasks
-- P0: Replace PLACEHOLDER URLs in `src/config.js` (Google Maps venue link, RSVP link/form, wishlist URL, travel document URL, RSVP contact).
+- P0: Replace the RSVP button PLACEHOLDER link in `src/config.js` with the real RSVP form/contact.
 - P1: Swap in real couple photographs (event cards + photo frame slideshow).
-- P1: Real venue name/address once confirmed.
 - P2: Countdown timer to the Muhurtham.
 - P2: Soft instrumental music toggle.
 - P2: Language toggle (English/Tamil).

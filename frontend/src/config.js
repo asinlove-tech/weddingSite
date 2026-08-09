@@ -5,10 +5,10 @@
 
 export const images = {
     temple: "/images/gopuram.webp",
-    ganesha: "/images/ganesha-ai.png",
+    ganesha: "/images/ganesha-clean.png",
+    ganeshaFramed: "/images/ganesha-framed.png",
     cocktail: "/images/cocktail.webp",
-    mandap: "/images/mandap.webp",
-    mandapCut: "/images/mandap-cut.png",
+    mandap: "/images/mandap-new.webp",
     venue: "/images/venue-car.png",
     pattern: "/images/pattern.webp",
 };
@@ -16,17 +16,16 @@ export const images = {
 export const couple = {
     groom: "Amit Kumar",
     bride: "Sri Sakthi Maheswari",
-    and: "And",
+    and: "Weds",
 };
 
 export const blessing = {
-    overline: "With the heavenly blessings of",
-    brideFamily: "Bride's Family",
-    groomFamily: "Groom's Family",
-    invite: "We invite you to celebrate the wedding of",
-    join: "and",
-    request:
-        "and request the pleasure of your presence at our wedding celebrations.",
+    overline: "With the blessings of our parents and elders,",
+    invite: "we joyfully invite you to celebrate the wedding of",
+    join: "&",
+    dateLine: "On 25th October 2026",
+    placeLine: "in Coimbatore",
+    request: "and request the pleasure of your presence as we celebrate this beautiful beginning together.",
 };
 
 export const events = [
@@ -50,23 +49,22 @@ export const events = [
 
 export const venue = {
     title: "Venue",
-    place: "Coimbatore, Tamil Nadu",
-    note: "The celebration venue will be announced here soon.",
+    place: "Bellezza Event Venue",
+    note: "Coimbatore, Tamil Nadu",
     image: images.venue,
     imageAlt: "Illustration of a little vintage car decorated with wedding garlands",
     mapsLabel: "View on Google Maps",
-    // PLACEHOLDER: replace with the exact venue Google Maps link
-    mapsUrl: "https://maps.google.com/?q=Coimbatore",
+    mapsUrl: "https://maps.app.goo.gl/sFnxQgQYNtkiukdM6",
 };
 
 export const meetTheCouple = {
     title: "Meet the Couple",
-    intro: "Some stories are written over years; ours found its way home. What began as two separate journeys now continues as one — and we cannot imagine a more joyful beginning than celebrating it surrounded by the people we love most.",
+    intro: "A little bit of chaos, a lot of laughter, plenty of food, and one very long list of things we've decided to do together. Here's to many more stories, detours, and meals along the way.",
     photos: [
         { src: images.cocktail, alt: "The couple dancing, illustrated", pos: "center 30%" },
         { src: images.mandap, alt: "The couple in the wedding mandap, illustrated", pos: "center 35%" },
         { src: images.temple, alt: "South Indian temple gopuram, illustrated", pos: "center 12%" },
-        { src: images.ganesha, alt: "Lord Ganesha golden line artwork", pos: "center" },
+        { src: images.ganeshaFramed, alt: "Lord Ganesha golden line artwork", pos: "center" },
     ],
 };
 
@@ -77,7 +75,7 @@ export const infoSection = {
             id: "weather",
             icon: "weather",
             title: "Weather",
-            text: "Late October in Coimbatore is warm and pleasant — expect gentle days around 30°C and cooler, breezy evenings.",
+            text: "Warm days, pleasant evenings, and a chance of a passing shower or two. Come prepared for sunshine, a little rain, and plenty of celebration.",
         },
         {
             id: "attire",
@@ -96,35 +94,33 @@ export const infoSection = {
             icon: "explore",
             title: "Things to Do Around Coimbatore",
             text: "Temple towns, misty hills and filter coffee — our curated guide has all our favourites for a little side trip.",
-            // PLACEHOLDER: replace with the travel recommendations document URL
-            href: "#travel-guide",
+            href: "https://docs.google.com/document/d/1TJGqHQL5oteEY-SzmfUG_-QxhH_1EzXVdTcAJb7jHKw/edit?usp=sharing",
         },
     ],
 };
 
 export const rsvp = {
     title: "RSVP",
-    note: "Kindly let us know if you can join us — we can't wait to hear from you.",
+    note: "We're excited to hear from you! Kindly let us know if you can join us.",
     buttonLabel: "RSVP",
     // PLACEHOLDER: replace with the RSVP form / contact link
     url: "#rsvp",
-    contact: "For any questions, please reach out to the family.",
+    contact: "",
 };
 
 export const wishlist = {
     title: "Wedding Wishlist",
     message:
-        "Your presence is the greatest gift we could ask for. If you'd still like to bless us with a gift, we've put together a small wishlist. You're welcome to reserve an entire gift, contribute toward a shared one, or choose something completely different.",
+        "Your presence is the best gift ❤️ But if you'd like to spoil us a little, we've put together a wishlist! Claim a gift, or chip in towards one with the gang — solo mission or group project, totally up to you.",
     buttonLabel: "View Wishlist",
-    // PLACEHOLDER: replace with the wishlist URL
-    url: "#wishlist",
+    url: "https://hazlnut.in/wishlist/asinlove",
 };
 
 export const closing = {
     lines: [
         "Thank you for being part of our story.",
-        "Your presence and blessings will make our celebration complete.",
-        "We can't wait to welcome you to Coimbatore.",
+        "Having you with us as we begin this new chapter will make it all the more special.",
+        "We can't wait to celebrate together in Coimbatore.",
     ],
     signoff: "Amit Kumar and Sri Sakthi Maheswari",
 };

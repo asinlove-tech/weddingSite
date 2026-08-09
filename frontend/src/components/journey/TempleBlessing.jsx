@@ -55,15 +55,7 @@ export const TempleBlessing = () => {
                     <p className="reveal text-xs font-medium uppercase tracking-[0.32em] text-[#2B2620]/70">
                         {blessing.overline}
                     </p>
-                    <p className="reveal reveal-delay-1 font-display text-3xl italic text-[#2B2620] md:text-4xl">
-                        {blessing.brideFamily}
-                        <span className="mx-3 text-[#B08D3F]">&amp;</span>
-                        {blessing.groomFamily}
-                    </p>
-                    <div className="reveal reveal-delay-1 py-1">
-                        <Ornament />
-                    </div>
-                    <p className="reveal reveal-delay-2 text-base leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
+                    <p className="reveal reveal-delay-1 text-base leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
                         {blessing.invite}
                     </p>
                     <p className="reveal reveal-delay-2 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">
@@ -74,6 +66,15 @@ export const TempleBlessing = () => {
                     </p>
                     <p className="reveal reveal-delay-3 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">
                         {couple.bride}
+                    </p>
+                    <div className="reveal reveal-delay-3 py-1">
+                        <Ornament />
+                    </div>
+                    <p className="reveal reveal-delay-3 font-display text-3xl text-[#2B2620] md:text-4xl">
+                        {blessing.dateLine}
+                    </p>
+                    <p className="reveal reveal-delay-3 text-base uppercase tracking-[0.28em] text-[#B08D3F]">
+                        {blessing.placeLine}
                     </p>
                     <p className="reveal reveal-delay-3 max-w-md text-base leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
                         {blessing.request}

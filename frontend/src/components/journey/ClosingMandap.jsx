@@ -50,7 +50,7 @@ export const ClosingMandap = () => {
                     className="absolute inset-0 opacity-0"
                     style={{
                         background:
-                            "linear-gradient(180deg,#0E2438 0%,#1B3A50 36%,#3E4A55 58%,#7A5540 82%,#A06A48 100%)",
+                            "linear-gradient(180deg,#FAF5EC 0%,#F6EFDF 42%,#F0E3C8 75%,#EAD8B8 100%)",
                     }}
                 />
                 <div
@@ -59,7 +59,7 @@ export const ClosingMandap = () => {
                     className="absolute inset-0 opacity-0"
                     style={{
                         background:
-                            "radial-gradient(ellipse 70% 40% at 50% 78%, rgba(232,163,92,0.5) 0%, rgba(217,140,65,0.2) 50%, transparent 78%)",
+                            "radial-gradient(ellipse 70% 40% at 50% 78%, rgba(217,164,65,0.3) 0%, rgba(217,140,65,0.12) 50%, transparent 78%)",
                     }}
                 />
                 <div
@@ -71,23 +71,23 @@ export const ClosingMandap = () => {
                         {closing.lines.map((line, i) => (
                             <p
                                 key={i}
-                                className="font-display text-2xl italic leading-snug text-[#FAF5EC] [text-shadow:0_2px_24px_rgba(11,31,48,0.6)] md:text-4xl"
+                                className="font-display text-2xl italic leading-snug text-[#3A3128] md:text-4xl"
                             >
                                 {line}
                             </p>
                         ))}
                     </div>
                     <div className="mt-2">
-                        <Ornament light />
+                        <Ornament />
                     </div>
-                    <p className="font-display text-lg tracking-[0.08em] text-[#C9A961] md:text-2xl">
+                    <p className="font-display text-xl font-medium uppercase tracking-[0.18em] text-[#8A5A1E] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-3xl">
                         {closing.signoff}
                     </p>
                 </div>
                 <img
                     ref={imgRef}
-                    src={images.mandapCut}
-                    alt="Illustration of the bride and groom seated from behind in a golden wedding mandap beside the sacred fire"
+                    src={images.mandap}
+                    alt="Illustration of the bride and groom seated from behind in a wedding mandap of carved wooden pillars, banana leaves and jasmine garlands, beside the sacred fire"
                     loading="lazy"
                     className="relative z-10 mb-[3vh] mt-auto max-h-[64vh] w-auto max-w-[98vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,black_28%)] md:max-h-[66vh]"
                 />
