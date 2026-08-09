@@ -10,11 +10,11 @@ export const Rsvp = () => {
             ref={ref}
             data-testid="rsvp"
             aria-label="RSVP"
-            className="relative px-6 py-28 md:py-36"
+            className="relative px-6 py-16 md:py-24"
         >
-            <div className="mx-auto flex max-w-xl flex-col items-center gap-9 text-center">
+            <div className="mx-auto flex max-w-xl flex-col items-center gap-8 text-center">
                 <SectionHeader title={rsvp.title} testId="rsvp-title" />
-                <p className="reveal reveal-delay-1 text-sm leading-relaxed tracking-[0.06em] text-[#2B2620]/70">
+                <p className="reveal reveal-delay-1 text-base leading-relaxed tracking-[0.06em] text-[#2B2620]/70">
                     {rsvp.note}
                 </p>
                 <div className="reveal reveal-delay-2">
@@ -23,7 +23,7 @@ export const Rsvp = () => {
                     </PrimaryButton>
                 </div>
                 {rsvp.contact && (
-                    <p className="reveal reveal-delay-3 text-xs tracking-[0.1em] text-[#2B2620]/55">
+                    <p className="reveal reveal-delay-3 text-sm tracking-[0.1em] text-[#2B2620]/55">
                         {rsvp.contact}
                     </p>
                 )}

@@ -5,10 +5,11 @@
 
 export const images = {
     temple: "/images/gopuram.webp",
-    ganesha: "/images/ganesha-gold.png",
+    ganesha: "/images/ganesha-ai.png",
     cocktail: "/images/cocktail.webp",
     mandap: "/images/mandap.webp",
     mandapCut: "/images/mandap-cut.png",
+    venue: "/images/venue-car.png",
     pattern: "/images/pattern.webp",
 };
 
@@ -51,8 +52,8 @@ export const venue = {
     title: "Venue",
     place: "Coimbatore, Tamil Nadu",
     note: "The celebration venue will be announced here soon.",
-    image: images.temple,
-    imageAlt: "Illustration of a South Indian temple gopuram",
+    image: images.venue,
+    imageAlt: "Illustration of a little vintage car decorated with wedding garlands",
     mapsLabel: "View on Google Maps",
     // PLACEHOLDER: replace with the exact venue Google Maps link
     mapsUrl: "https://maps.google.com/?q=Coimbatore",

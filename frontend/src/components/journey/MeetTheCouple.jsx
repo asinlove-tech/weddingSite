@@ -10,7 +10,7 @@ export const MeetTheCouple = () => {
             ref={ref}
             data-testid="meet-the-couple"
             aria-label="Meet the couple"
-            className="relative px-6 py-28 md:py-36"
+            className="relative px-6 py-16 md:py-24"
         >
             <div className="mx-auto max-w-3xl">
                 <SectionHeader
@@ -18,10 +18,10 @@ export const MeetTheCouple = () => {
                     title={meetTheCouple.title}
                     testId="couple-title"
                 />
-                <p className="reveal reveal-delay-1 mx-auto mt-10 max-w-2xl text-center font-display text-xl italic leading-relaxed text-[#2B2620]/85 md:text-2xl">
+                <p className="reveal reveal-delay-1 mx-auto mt-8 max-w-2xl text-center font-display text-2xl italic leading-relaxed text-[#2B2620]/85 md:text-3xl">
                     {meetTheCouple.intro}
                 </p>
-                <div className="mt-16">
+                <div className="mt-12">
                     <PhotoFrame photos={meetTheCouple.photos} />
                 </div>
             </div>

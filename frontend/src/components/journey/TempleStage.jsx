@@ -24,7 +24,7 @@ export const TempleStage = () => {
                   : 62 + (34 * (p - 0.45)) / 0.55;
         img.style.backgroundPosition = `center ${posY}%`;
         img.style.transform = `scale(${1 + p * 0.06})`;
-        img.style.opacity = String(1 - seg(p, 0.93, 1));
+        img.style.opacity = String(1 - seg(p, 0.86, 1.0));
     });
 
     return (

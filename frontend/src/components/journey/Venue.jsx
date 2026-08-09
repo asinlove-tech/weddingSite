@@ -10,29 +10,26 @@ export const Venue = () => {
             ref={ref}
             data-testid="venue"
             aria-label="Venue"
-            className="relative px-6 py-28 md:py-40"
+            className="relative px-6 py-16 md:py-24"
         >
-            <div className="mx-auto flex max-w-2xl flex-col items-center gap-10 text-center">
+            <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
                 <SectionHeader
                     eyebrow="Where We Celebrate"
                     title={venue.title}
                     testId="venue-title"
                 />
-                <div className="reveal reveal-delay-1 overflow-hidden rounded-t-[999px] border border-[#B08D3F]/50 p-2">
-                    <div className="h-72 w-56 overflow-hidden rounded-t-[999px] md:h-80 md:w-64">
-                        <img
-                            src={venue.image}
-                            alt={venue.imageAlt}
-                            loading="lazy"
-                            className="h-full w-full object-cover object-top"
-                        />
-                    </div>
-                </div>
+                <img
+                    src={venue.image}
+                    alt={venue.imageAlt}
+                    loading="lazy"
+                    data-testid="venue-illustration"
+                    className="reveal reveal-delay-1 h-48 w-auto md:h-60"
+                />
                 <div className="reveal reveal-delay-2">
-                    <p className="font-display text-2xl italic text-[#2B2620] md:text-3xl">
+                    <p className="font-display text-3xl italic text-[#2B2620] md:text-4xl">
                         {venue.place}
                     </p>
-                    <p className="mt-3 text-sm tracking-[0.06em] text-[#2B2620]/65">
+                    <p className="mt-3 text-base tracking-[0.06em] text-[#2B2620]/65">
                         {venue.note}
                     </p>
                 </div>

@@ -1,7 +1,7 @@
 import { wishlist } from "@/config";
 import { useReveal } from "@/hooks/useReveal";
 import { PrimaryButton } from "@/components/shared/PrimaryButton";
-import { Ornament } from "@/components/shared/Ornament";
+import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export const WeddingWishlist = () => {
     const ref = useReveal();
@@ -10,18 +10,13 @@ export const WeddingWishlist = () => {
             ref={ref}
             data-testid="wedding-wishlist"
             aria-label="Wedding wishlist"
-            className="relative px-6 py-28 md:py-36"
+            className="relative px-6 py-16 md:py-24"
         >
-            <div className="mx-auto flex max-w-2xl flex-col items-center gap-9 text-center">
-                <div className="reveal flex flex-col items-center gap-4">
-                    <span className="text-[11px] font-medium uppercase tracking-[0.35em] text-[#B08D3F]">
-                        {wishlist.title}
-                    </span>
-                    <Ornament />
-                </div>
+            <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
+                <SectionHeader title={wishlist.title} testId="wishlist-title" />
                 <p
                     data-testid="wishlist-message"
-                    className="reveal reveal-delay-1 font-display text-xl italic leading-relaxed text-[#2B2620]/85 md:text-2xl"
+                    className="reveal reveal-delay-1 font-display text-2xl italic leading-relaxed text-[#2B2620]/85 md:text-3xl"
                 >
                     {wishlist.message}
                 </p>

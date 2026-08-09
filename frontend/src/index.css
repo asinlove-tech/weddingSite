@@ -50,26 +50,15 @@ body {
     will-change: transform, opacity, background-position;
 }
 
-/* ---- hero names: ivory on mobile sky, deep peacock on wide sky ---- */
+/* ---- hero names: white editorial caps over the sky ---- */
 .hero-names {
-    color: #faf5ec;
+    color: #fdfbf6;
     text-shadow:
-        0 1px 16px rgba(11, 31, 48, 0.55),
-        0 0 34px rgba(11, 31, 48, 0.28);
+        0 2px 18px rgba(11, 31, 48, 0.5),
+        0 0 40px rgba(11, 31, 48, 0.22);
 }
 .hero-and {
-    color: #e9d9b8;
-}
-@media (min-width: 640px) {
-    .hero-names {
-        color: #17384e;
-        text-shadow:
-            0 0 24px rgba(250, 245, 236, 0.9),
-            0 1px 6px rgba(250, 245, 236, 0.6);
-    }
-    .hero-and {
-        color: #b08d3f;
-    }
+    color: #f3e9d2;
 }
 
 /* ---- scroll reveals ---- */

@@ -18,14 +18,14 @@ const InfoCard = ({ card, delay }) => {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#B08D3F]/45 bg-[#FAF5EC]">
                     <Icon className="h-5 w-5 text-[#B08D3F]" strokeWidth={1.5} />
                 </span>
-                <h3 className="font-display text-2xl text-[#2B2620]">
+                <h3 className="font-display text-3xl text-[#2B2620]">
                     {card.title}
                 </h3>
                 {card.href && (
                     <ArrowUpRight className="ml-auto h-4 w-4 text-[#B08D3F]" />
                 )}
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-[#2B2620]/70">
+            <p className="mt-4 text-base leading-relaxed text-[#2B2620]/70">
                 {card.text}
             </p>
         </>
@@ -56,7 +56,7 @@ export const ThingsToKnow = () => {
             ref={ref}
             data-testid="things-to-know"
             aria-label="Things to know"
-            className="relative px-6 py-28 md:py-36"
+            className="relative px-6 py-16 md:py-24"
         >
             <div className="mx-auto max-w-4xl">
                 <SectionHeader
@@ -64,7 +64,7 @@ export const ThingsToKnow = () => {
                     title={infoSection.title}
                     testId="info-title"
                 />
-                <div className="mt-14 grid gap-6 sm:grid-cols-2 md:mt-16 md:gap-8">
+                <div className="mt-10 grid gap-6 sm:grid-cols-2 md:mt-12 md:gap-8">
                     {infoSection.cards.map((card, i) => (
                         <InfoCard key={card.id} card={card} delay={delays[i]} />
                     ))}

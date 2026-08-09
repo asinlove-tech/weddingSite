@@ -10,7 +10,7 @@ export const WeddingCelebrations = () => {
             ref={ref}
             data-testid="wedding-celebrations"
             aria-label="Wedding celebrations"
-            className="relative px-6 pb-32 pt-8 md:pb-44"
+            className="relative px-6 pb-16 pt-4 md:pb-24"
         >
             <div className="relative z-10 mx-auto max-w-4xl">
                 <SectionHeader
@@ -19,7 +19,7 @@ export const WeddingCelebrations = () => {
                     testId="celebrations-title"
                     light
                 />
-                <div className="mt-16 grid gap-10 md:mt-20 md:grid-cols-2 md:gap-14">
+                <div className="mt-10 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-14">
                     {events.map((event, i) => (
                         <EventCard
                             key={event.id}

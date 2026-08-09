@@ -43,7 +43,7 @@ export const ClosingMandap = () => {
             aria-label="Closing scene — the wedding mandap"
             className="relative h-[280vh]"
         >
-            <div className="sticky top-0 flex h-screen flex-col items-center overflow-hidden px-6 pt-[6vh]">
+            <div className="sticky top-0 flex h-screen flex-col items-center overflow-hidden">
                 <div
                     ref={duskRef}
                     aria-hidden="true"
@@ -65,13 +65,13 @@ export const ClosingMandap = () => {
                 <div
                     ref={textRef}
                     data-testid="closing-text"
-                    className="relative z-20 flex flex-col items-center gap-4 text-center opacity-0 will-change-transform"
+                    className="absolute inset-x-0 top-0 z-20 flex flex-col items-center gap-5 px-6 pt-[7vh] text-center opacity-0 will-change-transform"
                 >
                     <div className="flex max-w-xl flex-col gap-4">
                         {closing.lines.map((line, i) => (
                             <p
                                 key={i}
-                                className="font-display text-xl italic leading-snug text-[#FAF5EC] [text-shadow:0_2px_24px_rgba(11,31,48,0.6)] md:text-3xl"
+                                className="font-display text-2xl italic leading-snug text-[#FAF5EC] [text-shadow:0_2px_24px_rgba(11,31,48,0.6)] md:text-4xl"
                             >
                                 {line}
                             </p>
@@ -89,7 +89,7 @@ export const ClosingMandap = () => {
                     src={images.mandapCut}
                     alt="Illustration of the bride and groom seated from behind in a golden wedding mandap beside the sacred fire"
                     loading="lazy"
-                    className="relative z-10 mb-[5vh] mt-auto max-h-[50vh] w-auto max-w-[94vw] opacity-0 will-change-transform md:max-h-[52vh]"
+                    className="relative z-10 mb-[3vh] mt-auto max-h-[64vh] w-auto max-w-[98vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,black_28%)] md:max-h-[66vh]"
                 />
             </div>
         </section>

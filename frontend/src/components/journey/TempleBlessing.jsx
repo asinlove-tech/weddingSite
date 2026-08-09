@@ -27,7 +27,7 @@ export const TempleBlessing = () => {
             }}
             data-testid="temple-blessing"
             aria-label="Blessing and invitation"
-            className="relative px-6 pb-28 pt-24 md:pb-36 md:pt-32"
+            className="relative px-6 pb-16 pt-16 md:pb-24 md:pt-20"
         >
             <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
                 <div className="reveal">
@@ -42,20 +42,20 @@ export const TempleBlessing = () => {
 
                 <div
                     data-testid="blessing-text"
-                    className="relative mt-16 flex w-full max-w-2xl flex-col items-center gap-5 px-6 py-16 text-center md:max-w-3xl md:py-20"
+                    className="relative mt-10 flex w-full max-w-2xl flex-col items-center gap-5 px-6 py-14 text-center md:max-w-3xl md:py-16"
                 >
                     <div
                         aria-hidden="true"
                         className="absolute -inset-x-10 -inset-y-8 -z-10 md:-inset-x-28 md:-inset-y-10"
                         style={{
                             background:
-                                "radial-gradient(ellipse 62% 60% at 50% 50%, rgba(250,245,236,0.95) 0%, rgba(250,245,236,0.62) 55%, rgba(250,245,236,0) 85%)",
+                                "radial-gradient(ellipse 62% 60% at 50% 50%, rgba(250,245,236,0.8) 0%, rgba(250,245,236,0.38) 55%, rgba(250,245,236,0) 85%)",
                         }}
                     />
-                    <p className="reveal text-[11px] font-medium uppercase tracking-[0.32em] text-[#2B2620]/70">
+                    <p className="reveal text-xs font-medium uppercase tracking-[0.32em] text-[#2B2620]/70">
                         {blessing.overline}
                     </p>
-                    <p className="reveal reveal-delay-1 font-display text-2xl italic text-[#2B2620] md:text-3xl">
+                    <p className="reveal reveal-delay-1 font-display text-3xl italic text-[#2B2620] md:text-4xl">
                         {blessing.brideFamily}
                         <span className="mx-3 text-[#B08D3F]">&amp;</span>
                         {blessing.groomFamily}
@@ -63,19 +63,19 @@ export const TempleBlessing = () => {
                     <div className="reveal reveal-delay-1 py-1">
                         <Ornament />
                     </div>
-                    <p className="reveal reveal-delay-2 text-sm leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
+                    <p className="reveal reveal-delay-2 text-base leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
                         {blessing.invite}
                     </p>
-                    <p className="reveal reveal-delay-2 font-display text-4xl font-medium leading-tight text-[#2B2620] md:text-5xl">
+                    <p className="reveal reveal-delay-2 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">
                         {couple.groom}
                     </p>
-                    <p className="reveal reveal-delay-2 font-display text-xl italic text-[#B08D3F]">
+                    <p className="reveal reveal-delay-2 font-display text-2xl italic text-[#B08D3F]">
                         {blessing.join}
                     </p>
-                    <p className="reveal reveal-delay-3 font-display text-4xl font-medium leading-tight text-[#2B2620] md:text-5xl">
+                    <p className="reveal reveal-delay-3 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">
                         {couple.bride}
                     </p>
-                    <p className="reveal reveal-delay-3 max-w-md text-sm leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
+                    <p className="reveal reveal-delay-3 max-w-md text-base leading-relaxed tracking-[0.08em] text-[#2B2620]/75">
                         {blessing.request}
                     </p>
                 </div>

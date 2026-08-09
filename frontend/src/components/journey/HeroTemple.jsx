@@ -30,15 +30,15 @@ export const HeroTemple = () => {
                 >
                     <h1
                         data-testid="hero-names"
-                        className="hero-names relative font-display font-medium"
+                        className="hero-names relative font-display font-medium uppercase"
                     >
-                    <span className="block text-4xl leading-tight sm:text-6xl lg:text-7xl">
+                    <span className="block whitespace-nowrap text-[1.45rem] tracking-[0.08em] sm:text-6xl sm:tracking-[0.18em] lg:text-7xl">
                         {couple.groom}
                     </span>
-                    <span className="hero-and my-4 block text-2xl italic sm:text-3xl">
+                    <span className="hero-and my-3 block text-xs tracking-[0.55em] sm:my-5 sm:text-sm">
                         {couple.and}
                     </span>
-                    <span className="block text-4xl leading-tight sm:text-6xl lg:text-7xl">
+                    <span className="block whitespace-nowrap text-[1.45rem] tracking-[0.08em] sm:text-6xl sm:tracking-[0.18em] lg:text-7xl">
                         {couple.bride}
                     </span>
                     </h1>
