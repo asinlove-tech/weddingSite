@@ -13,19 +13,17 @@ Build a premium, immersive, single-page wedding invitation website for Amit Kuma
 - Components: `components/journey/` (WeddingJourney, TempleStage, HeroTemple, TempleBlessing, WeddingCelebrations, EventCard, Venue, MeetTheCouple, PhotoFrame, ThingsToKnow, Rsvp, WeddingWishlist, ClosingMandap), `components/shared/` (PrimaryButton, SectionHeader, Ornament), `hooks/` (useRafScroll, useReveal).
 - Artworks in `public/images/`: gopuram.webp (user-provided hero), ganesha.webp (user-provided, shown inside dark sanctum arch), cocktail.webp, mandap.webp (user-provided, resized/recompressed).
 
-## Implemented (2026-08-09)
-- Two-layer fixed temple stage: a wide blur-fill hero composite (sky + full gopuram top + carpet) opens the page; on first scroll the couple's names fade in, pinned over the sky; then the stage crossfades into a slow walk down the actual carpet inside the artwork (background pan 62%→97%), fading out as the guest reaches the Venue.
-- Couple's names hidden on load, revealed on first scroll (scroll-linked opacity), pinned via sticky hero.
-- Ganesha reprocessed to transparent cream-gold line art, floating directly on the artwork's carpet (no overlay panel); starts large, scales down and rises as the guest scrolls. Invitation text reveals beneath on an ivory glass panel.
-- Two oval-framed event cards (Cocktail Evening 24 Oct 6 PM; Muhurtham 25 Oct 8 AM) with soft blur/slide/fade entrance; celebrations header in ivory/light-gold for contrast on the carpet.
-- Kolam-pattern texture (user-provided, mirror-tiled seamless, 50% opacity) as the fixed background from Venue onward.
-- Minimal Venue section with arch-framed temple illustration and "View on Google Maps" CTA (PLACEHOLDER URL in config).
-- Meet the Couple: editorial intro + large soft ivory-mat photo frame (no heavy wood), auto-crossfading slideshow of the 4 artworks with per-photo focal positioning, disabled under reduced-motion.
-- Things to Know: 4 elegant cards (Weather, Traditional Attire, Travel Tips, Things to Do Around Coimbatore — last links to PLACEHOLDER doc URL).
-- Minimal RSVP section (one button, PLACEHOLDER link) and Wedding Wishlist (exact message from brief, PLACEHOLDER link).
-- Closing scene: gradual ivory → deep dusk transition, mandap artwork with flood-fill-removed background melting into the dusk sky, warm fire glow, thank-you text at the TOP, names beneath — page ends on the scene (no white fade).
-- Accessibility: semantic sections, aria-labels, alt text, focus-visible gold outline, prefers-reduced-motion support throughout.
-- Verified via screenshots: hero initial/names (desktop+mobile), blessing with Ganesha on carpet, event cards, venue + pattern, photo frame, info cards, and the full closing sequence on desktop and mobile.
+## Implemented (2026-08-09, rev 3)
+- Single full-bleed temple stage: the gopuram artwork spans the entire page width; scroll pans it sky → tower → carpet in one continuous walk (piecewise eased curve), dissolving gradually into the damask motif background near the Venue.
+- Hero opens on sky + gopuram crown only; names fade in pinned on first scroll — deep peacock over the sky on desktop, ivory with soft light halo on mobile. No dark scrims.
+- Ganesha reprocessed (4x upscale, blur-denoise, smoothstep alpha, flat cream-gold) — clean filigree medallion floating directly on the artwork's carpet; scales down and rises on scroll; bottom edge soft-masked.
+- Blessing text sits on a seamless soft ivory glow (radial pool, no card edges) over the carpet.
+- Two oval-framed event cards (Cocktail Evening 24 Oct 6 PM; Muhurtham 25 Oct 8 AM) directly on the carpet; celebrations header in ivory/light-gold.
+- Damask motif background (user tile, mirror-tiled seamless, blurred + ivory-blended, 40% opacity) from Venue onward.
+- Meet the Couple: editorial intro + large soft ivory-mat photo frame, auto-crossfading slideshow of the 4 artworks with per-photo focal positioning.
+- Closing: warm dusk gradient (peacock → terracotta horizon), mandap artwork with flood-fill-removed background melting into the scene, warm fire glow; thank-you text fully ABOVE the image, readable; page ends on the scene.
+- Accessibility: semantic sections, aria-labels, alt text, focus-visible gold outline, prefers-reduced-motion support.
+- Verified via screenshots (desktop + mobile): hero initial/names, Ganesha on carpet, blessing pool, celebrations on carpet, venue dissolve transition, photo frame, closing scene.
 
 ## Backlog / Next Tasks
 - P0: Replace PLACEHOLDER URLs in `src/config.js` (Google Maps venue link, RSVP link/form, wishlist URL, travel document URL, RSVP contact).

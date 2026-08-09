@@ -36,14 +36,22 @@ export const TempleBlessing = () => {
                         data-testid="ganesha-image"
                         src={images.ganesha}
                         alt="Lord Ganesha golden line artwork"
-                        className="h-[300px] w-auto will-change-transform [filter:drop-shadow(0_8px_34px_rgba(240,226,180,0.45))] md:h-[400px]"
+                        className="h-[300px] w-auto will-change-transform [filter:drop-shadow(0_8px_34px_rgba(240,226,180,0.45))] [mask-image:linear-gradient(180deg,black_92%,transparent)] md:h-[400px]"
                     />
                 </div>
 
                 <div
                     data-testid="blessing-text"
-                    className="mt-14 flex w-full max-w-2xl flex-col items-center gap-5 rounded-[2rem] border border-[#B08D3F]/25 bg-[#FAF5EC]/90 px-6 py-12 text-center shadow-[0_40px_80px_-50px_rgba(43,38,32,0.4)] backdrop-blur-md md:px-14 md:py-16"
+                    className="relative mt-16 flex w-full max-w-2xl flex-col items-center gap-5 px-6 py-16 text-center md:max-w-3xl md:py-20"
                 >
+                    <div
+                        aria-hidden="true"
+                        className="absolute -inset-x-10 -inset-y-8 -z-10 md:-inset-x-28 md:-inset-y-10"
+                        style={{
+                            background:
+                                "radial-gradient(ellipse 62% 60% at 50% 50%, rgba(250,245,236,0.95) 0%, rgba(250,245,236,0.62) 55%, rgba(250,245,236,0) 85%)",
+                        }}
+                    />
                     <p className="reveal text-[11px] font-medium uppercase tracking-[0.32em] text-[#2B2620]/70">
                         {blessing.overline}
                     </p>

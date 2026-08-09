@@ -4,36 +4,27 @@ import { useRafScroll } from "@/hooks/useRafScroll";
 const seg = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
 
 export const TempleStage = () => {
-    const heroRef = useRef(null);
-    const walkRef = useRef(null);
+    const imgRef = useRef(null);
 
     useRafScroll(() => {
-        const hero = heroRef.current;
-        const walk = walkRef.current;
-        if (!hero || !walk) return;
+        const img = imgRef.current;
+        if (!img) return;
         const y = window.scrollY;
         const vh = window.innerHeight;
-
-        // phase 1: wide entrance scene (sky + full gopuram), gentle settle
-        const hp = Math.min(1, y / vh);
-        hero.style.backgroundPosition = `center ${hp * 14}%`;
-        hero.style.transform = `scale(${1 + hp * 0.05})`;
-        hero.style.opacity = String(1 - seg(y / vh, 0.62, 1.05));
-
-        // phase 2: walk the length of the carpet inside the artwork
         const region = document.querySelector("[data-carpet-region]");
         const end = region
-            ? region.offsetTop + region.offsetHeight
-            : vh * 5;
-        const wp = Math.min(
-            1,
-            Math.max(0, (y - vh * 0.5) / Math.max(1, end - vh * 1.4)),
-        );
-        walk.style.backgroundPosition = `center ${62 + wp * 35}%`;
-        walk.style.transform = `scale(${1.02 + wp * 0.04})`;
-        walk.style.opacity = String(
-            seg(y / vh, 0.55, 0.95) * (1 - seg(wp, 0.88, 1)),
-        );
+            ? region.offsetTop + region.offsetHeight + vh * 0.9
+            : vh * 6;
+        const p = Math.min(1, Math.max(0, y / Math.max(1, end - vh * 1.1)));
+        const posY =
+            p < 0.15
+                ? 3 + (p / 0.15) * 6
+                : p < 0.45
+                  ? 9 + 53 * Math.pow((p - 0.15) / 0.3, 1.25)
+                  : 62 + (34 * (p - 0.45)) / 0.55;
+        img.style.backgroundPosition = `center ${posY}%`;
+        img.style.transform = `scale(${1 + p * 0.06})`;
+        img.style.opacity = String(1 - seg(p, 0.93, 1));
     });
 
     return (
@@ -42,14 +33,9 @@ export const TempleStage = () => {
             className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
         >
             <div
-                ref={walkRef}
-                className="temple-stage-img opacity-0"
-                style={{ backgroundImage: "url(/images/gopuram.webp)" }}
-            />
-            <div
-                ref={heroRef}
+                ref={imgRef}
                 className="temple-stage-img"
-                style={{ backgroundImage: "url(/images/hero-wide.webp)" }}
+                style={{ backgroundImage: "url(/images/gopuram.webp)" }}
             />
             <div className="absolute inset-0 bg-[#E8A35C]/[0.05]" />
         </div>

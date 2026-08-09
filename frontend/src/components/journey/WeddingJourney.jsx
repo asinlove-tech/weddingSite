@@ -13,10 +13,10 @@ export const WeddingJourney = () => (
     <div className="relative">
         <div
             aria-hidden="true"
-            className="pointer-events-none fixed inset-0 z-0 opacity-50"
+            className="pointer-events-none fixed inset-0 z-0 opacity-40"
             style={{
                 backgroundImage: "url(/images/pattern-tile.webp)",
-                backgroundSize: "880px",
+                backgroundSize: "1150px",
                 backgroundRepeat: "repeat",
             }}
         />
