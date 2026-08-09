@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { closing, images } from "@/config";
 import { useRafScroll } from "@/hooks/useRafScroll";
-import { Ornament } from "@/components/shared/Ornament";
 
 const seg = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
 
@@ -65,31 +64,36 @@ export const ClosingMandap = () => {
                 <div
                     ref={textRef}
                     data-testid="closing-text"
-                    className="absolute inset-x-0 top-0 z-20 flex flex-col items-center gap-3 px-6 pt-[6vh] text-center opacity-0 will-change-transform"
+                    className="absolute inset-x-0 top-0 z-20 flex flex-col items-center gap-3 px-6 pt-[9vh] text-center opacity-0 will-change-transform"
                 >
                     <div className="flex max-w-xl flex-col gap-3">
                         {closing.lines.map((line, i) => (
                             <p
                                 key={i}
-                                className="font-display text-xl italic leading-relaxed text-[#241D16] md:text-2xl"
+                                className="font-display text-xl italic leading-relaxed text-[#241D16] [text-shadow:0_1px_16px_rgba(250,245,236,0.8)] md:text-2xl"
                             >
                                 {line}
                             </p>
                         ))}
                     </div>
-                    <div className="mt-1">
-                        <Ornament />
+                    <div className="mt-3 flex flex-col items-center gap-1.5">
+                        <p className="font-display text-2xl italic text-[#241D16] md:text-3xl">
+                            {closing.signoffPre}
+                        </p>
+                        <p className="font-display text-4xl font-semibold tracking-[0.04em] text-[#7A3410] [text-shadow:0_2px_22px_rgba(250,240,220,0.9)] md:text-6xl">
+                            {closing.signoffNames}
+                        </p>
+                        <p className="font-display text-2xl italic text-[#241D16] md:text-3xl">
+                            {closing.signoffPost}
+                        </p>
                     </div>
-                    <p className="font-display text-base font-medium uppercase tracking-[0.2em] text-[#6B4313] [text-shadow:0_1px_14px_rgba(250,245,236,0.85)] md:text-xl">
-                        {closing.signoff}
-                    </p>
                 </div>
                 <img
                     ref={imgRef}
                     src={images.mandap}
                     alt="Illustration of the bride and groom seated from behind in a wedding mandap of carved wooden pillars, banana leaves and jasmine garlands, beside the sacred fire"
                     loading="lazy"
-                    className="relative z-10 mb-[2vh] mt-auto max-h-[66vh] w-auto max-w-[94vw] opacity-0 will-change-transform [mask-image:radial-gradient(ellipse_72%_68%_at_50%_52%,black_58%,transparent_88%)] md:max-h-[72vh]"
+                    className="relative z-10 mb-[2vh] mt-auto max-h-[62vh] w-auto max-w-[94vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.35)_18%,black_36%)] md:max-h-[64vh]"
                 />
             </div>
         </section>

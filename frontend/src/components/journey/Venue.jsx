@@ -23,7 +23,7 @@ export const Venue = () => {
                     alt={venue.imageAlt}
                     loading="lazy"
                     data-testid="venue-illustration"
-                    className="reveal reveal-delay-1 h-48 w-auto md:h-60"
+                    className="reveal reveal-delay-1 h-60 w-auto md:h-80"
                 />
                 <div className="reveal reveal-delay-2">
                     <p className="font-display text-3xl italic text-[#2B2620] md:text-4xl">

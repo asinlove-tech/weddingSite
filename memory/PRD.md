@@ -27,6 +27,7 @@ Build a premium, immersive, single-page wedding invitation website for Amit Kuma
 - Rev 6: walk timing re-eased so Ganesha and the blessing text land on the carpet (not the tower); "While You're in Coimbatore" card with underlined "Read our recommendations" link; closing finale rebuilt as a sunrise (blue → dusty pink → peach → cream with warm sun glow), smaller cozy typography, signoff clear of the mandap artwork.
 - Rev 7: hero extended to 235svh so Ganesha/blessing arrive ~2 screens later, fully on the carpet; hero names now fade out as the guest reaches the temple doorway; finale text darkened for contrast.
 - Rev 8: long-carpet gopuram artwork (gopuram_longcrop) swapped in with retuned walk curve; hero extended to 290svh so Ganesha arrives even later on the carpet; hero names now fade in automatically 2s after load and stay until the Ganesha transition; finale mandap enlarged responsively with all edges feathered into the sunrise background.
+- Rev 9: crisp 1080px gopuram composite (sharp tower from new upload + long carpet from previous, seam-blended); RSVP note adds September 25th deadline; Muhurtham corrected to 7 AM; bigger "&" in blessing; bigger venue car; new wishlist copy; finale text overlaid on the mandap with a stronger top mask, signoff changed to "With love, Amit & Sakthi and our families" with the names highlighted in deep maroon.
 
 ## Backlog / Next Tasks
 - P0: Replace the RSVP button PLACEHOLDER link in `src/config.js` with the real RSVP form/contact.

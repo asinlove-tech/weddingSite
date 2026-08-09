@@ -61,7 +61,7 @@ export const TempleBlessing = () => {
                     <p className="reveal reveal-delay-2 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">
                         {couple.groom}
                     </p>
-                    <p className="reveal reveal-delay-2 font-display text-2xl italic text-[#B08D3F]">
+                    <p className="reveal reveal-delay-2 font-display text-4xl italic text-[#B08D3F] md:text-5xl">
                         {blessing.join}
                     </p>
                     <p className="reveal reveal-delay-3 font-display text-5xl font-medium leading-tight text-[#2B2620] md:text-6xl">

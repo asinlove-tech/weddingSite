@@ -20,8 +20,8 @@ export const TempleStage = () => {
             p < 0.1
                 ? 2 + (p / 0.1) * 6
                 : p < 0.45
-                  ? 8 + 38 * Math.pow((p - 0.1) / 0.35, 1.1)
-                  : 46 + (51 * (p - 0.45)) / 0.55;
+                  ? 8 + 18 * Math.pow((p - 0.1) / 0.35, 1.1)
+                  : 26 + (70 * (p - 0.45)) / 0.55;
         img.style.backgroundPosition = `center ${posY}%`;
         img.style.transform = `scale(${1 + p * 0.06})`;
         img.style.opacity = String(1 - seg(p, 0.86, 1.0));

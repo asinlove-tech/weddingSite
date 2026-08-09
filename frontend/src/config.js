@@ -41,7 +41,7 @@ export const events = [
         id: "muhurtham",
         title: "Muhurtham",
         date: "25 October",
-        time: "8 AM onwards",
+        time: "7 AM onwards",
         image: images.mandap,
         alt: "Illustration of the couple seated in the wedding mandap",
     },
@@ -102,7 +102,7 @@ export const infoSection = {
 
 export const rsvp = {
     title: "RSVP",
-    note: "We're excited to hear from you! Kindly let us know if you can join us.",
+    note: "We're excited to hear from you! Kindly let us know if you can join us — please RSVP by September 25th.",
     buttonLabel: "RSVP",
     // PLACEHOLDER: replace with the RSVP form / contact link
     url: "#rsvp",
@@ -112,7 +112,7 @@ export const rsvp = {
 export const wishlist = {
     title: "Wedding Wishlist",
     message:
-        "Your presence is the best gift ❤️ But if you'd like to spoil us a little, we've put together a wishlist! Claim a gift, or chip in towards one with the gang — solo mission or group project, totally up to you.",
+        "Your presence is the best gift ❤️ But if you'd like to spoil us a little, feel free to gift us anything you fancy! We've also put together a wishlist if you need some inspiration — claim a gift, or chip in towards one with the gang. Solo mission or group project, totally up to you!",
     buttonLabel: "View Wishlist",
     url: "https://hazlnut.in/wishlist/asinlove",
 };
@@ -123,5 +123,7 @@ export const closing = {
         "Having you with us as we begin this new chapter will make it all the more special.",
         "We can't wait to celebrate together in Coimbatore.",
     ],
-    signoff: "Amit Kumar and Sri Sakthi Maheswari",
+    signoffPre: "With love,",
+    signoffNames: "Amit & Sakthi",
+    signoffPost: "and our families",
 };
