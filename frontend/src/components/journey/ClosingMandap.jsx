@@ -89,7 +89,7 @@ export const ClosingMandap = () => {
                     src={images.mandap}
                     alt="Illustration of the bride and groom seated from behind in a wedding mandap of carved wooden pillars, banana leaves and jasmine garlands, beside the sacred fire"
                     loading="lazy"
-                    className="relative z-10 mb-[4vh] mt-auto max-h-[54vh] w-auto max-w-[96vw] opacity-0 will-change-transform [mask-image:linear-gradient(180deg,transparent_0%,black_28%)] md:max-h-[56vh]"
+                    className="relative z-10 mb-[2vh] mt-auto max-h-[66vh] w-auto max-w-[94vw] opacity-0 will-change-transform [mask-image:radial-gradient(ellipse_72%_68%_at_50%_52%,black_58%,transparent_88%)] md:max-h-[72vh]"
                 />
             </div>
         </section>

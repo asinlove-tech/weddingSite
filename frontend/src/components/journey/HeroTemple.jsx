@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { couple } from "@/config";
 import { useRafScroll } from "@/hooks/useRafScroll";
 import { ChevronDown } from "lucide-react";
@@ -7,31 +7,46 @@ export const HeroTemple = () => {
     const namesRef = useRef(null);
     const cueRef = useRef(null);
     const sectionRef = useRef(null);
-
-    useRafScroll(() => {
+    const shownRef = useRef(false);
+    const updateRef = useRef(() => {});
+    updateRef.current = () => {
         const y = window.scrollY;
         const vh = window.innerHeight;
         const heroH = sectionRef.current
             ? sectionRef.current.offsetHeight
-            : vh * 2.35;
-        const tIn = Math.min(1, Math.max(0, (y - 20) / 120));
+            : vh * 2.9;
         const tOut = Math.min(
             1,
-            Math.max(0, (y - (heroH - vh * 0.85)) / (vh * 0.45)),
+            Math.max(0, (y - (heroH - vh * 0.8)) / (vh * 0.5)),
         );
         if (namesRef.current) {
-            namesRef.current.style.opacity = String(Math.min(tIn, 1 - tOut));
-            namesRef.current.style.transform = `translateY(${(1 - tIn) * 18 - tOut * 12}px)`;
+            namesRef.current.style.opacity = String(
+                shownRef.current ? 1 - tOut : 0,
+            );
+            namesRef.current.style.transform = `translateY(${shownRef.current ? -tOut * 12 : 18}px)`;
         }
-        if (cueRef.current) cueRef.current.style.opacity = String(1 - tIn);
-    });
+        if (cueRef.current)
+            cueRef.current.style.opacity = String(
+                shownRef.current ? Math.max(0, 1 - y / 60) : 1,
+            );
+    };
+
+    useRafScroll(() => updateRef.current());
+
+    useEffect(() => {
+        const t = setTimeout(() => {
+            shownRef.current = true;
+            updateRef.current();
+        }, 2000);
+        return () => clearTimeout(t);
+    }, []);
 
     return (
         <section
             ref={sectionRef}
             data-testid="hero-temple"
             aria-label="Wedding invitation of Amit Kumar and Sri Sakthi Maheswari"
-            className="relative h-[235svh]"
+            className="relative h-[290svh]"
         >
             <div className="sticky top-0 flex h-[100svh] flex-col items-center justify-between overflow-hidden">
                 <div className="px-6 pt-[7vh] text-center">
